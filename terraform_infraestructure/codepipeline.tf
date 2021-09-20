@@ -88,8 +88,8 @@ resource "aws_codepipeline" "simple_web_app_pipeline" {
         action {
         category = "Deploy"
         configuration = {
-            "ClusterName" = var.cluser_name
-            "ServiceName" = var.service_name
+            "ClusterName" = module.ecs-cluster.aws_ecs_cluster_cluster_name
+            "ServiceName" = module.ecs-fargate-service.aws_ecs_service_service_name
             "FileName"    = "imagedefinitions.json"
             #"DeploymentTimeout" = "15"
         }
