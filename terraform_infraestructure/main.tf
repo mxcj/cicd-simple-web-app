@@ -7,6 +7,12 @@ terraform {
       version = "~> 3.0"  
     }
   }
+  backend "s3" {
+        bucket = "ci-cd-pipeline-terraform"
+        encrypt = true
+        key = "terraform.tfstate"
+        region = "us-west-2"
+    }
 }
 #Provider configurations
 provider "aws" {
@@ -183,3 +189,8 @@ module "td" {
   # Optional tags
   tags = var.tags
  }
+
+# #------------------------------------------------------------------------------
+# # PIPELINE
+# #------------------------------------------------------------------------------
+

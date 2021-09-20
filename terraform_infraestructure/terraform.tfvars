@@ -58,4 +58,6 @@ lb_target_group_health_check_healthy_threshold = 3
 lb_target_group_health_check_unhealthy_threshold = 3
 lb_target_group_health_check_matcher = 200
 
-
+artifacts_bucket_name = "cicd-simple-web-artifacts"
+nodejs_project_repository_name = "mxcj/cicd-simple-web-app"
+codestar_connector_credentials = "arn:aws:codestar-connections:us-west-2:224234462137:connection/f1bac62a-c5b5-4bff-91fb-47c95f2a54a3"

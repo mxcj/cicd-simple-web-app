@@ -692,4 +692,41 @@ variable "additional_certificates_arn_for_https_listeners" {
   default     = []
 }
 
+#------------------------------------------------------------------------------
+# PIPELINE
+#------------------------------------------------------------------------------
+variable "env" {
+  description = "Targeted Depolyment environment"
+  type = string
+  default     = "dev"
+}
+variable "nodejs_project_repository_name" { 
+  description = "Name of the Nodejs project repository to connect"
+  type = string
+  default     = "cicd-simple-web-app"
+}
+variable "nodejs_project_repository_branch" {
+  description = "Branch of the NodeJS repository to connect"
+  type = string
+  default     = "main"
+}
 
+variable "artifacts_bucket_name" {
+  description = "S3 Bucket to store artifacts"
+  type = string
+}
+
+# variable "aws_ecs_cluster_name" {
+#   description = "Target Amazon ECS Cluster Name"
+#   type = string
+#   default     = "MicroServicesCluster"
+# }
+
+# variable "aws_ecs_node_app_service_name" {
+#   description = "Target Amazon ECS Cluster NodeJs App Service name"
+#   default     = "nodeAppService"
+# }
+
+variable codestar_connector_credentials {
+    type = string
+}
