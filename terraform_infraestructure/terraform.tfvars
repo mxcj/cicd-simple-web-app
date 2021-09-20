@@ -31,7 +31,7 @@ desired_count = 1
 enable_ecs_managed_tags = true
 platform_version = "LATEST"
 
-service_name = "service-simple-server"
+service_name = "service-simple-server-service"
 assign_public_ip = true
 enable_autoscaling = true
 lb_internal = false
