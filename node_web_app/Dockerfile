@@ -1,5 +1,5 @@
 FROM node:14
-WORKDIR /var/www/html/
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
