@@ -1,6 +1,6 @@
 FROM node:14.17.1-slim
 WORKDIR /var/www/html/
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm cache clean --force && npm install
 COPY ./ ./
 EXPOSE 3000
